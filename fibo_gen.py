@@ -2,8 +2,10 @@
 from flask.ext.restful import reqparse, abort, Api, Resource
 from itertools import islice
 import fibo_func
+import os,sys
 
-class FiboGen:
+
+class FiboGen(Resource):
     def get(self,Fib_n):
         if Fib_n.isdigit():
             num=int(Fib_n)

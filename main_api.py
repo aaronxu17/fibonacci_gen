@@ -3,7 +3,7 @@
 from flask import Flask
 from flask.ext.restful import reqparse, abort, Api, Resource
 from single_task import *
-
+from fibo_gen import *
 app = Flask(__name__)
 api = Api(app)
 
@@ -25,7 +25,7 @@ class Index(Resource):
 
 api.add_resource(Index,'/')
 api.add_resource(SingleTask, '/<string:task_id>')
-# api.add_resource(fibo_gen.FiboGen,'/index/task1/<string:Fib_n>')
+api.add_resource(FiboGen,'/task1/<string:Fib_n>')
 
 if __name__=='__main__':
-    app.run()
+    app.run(debug=True)
