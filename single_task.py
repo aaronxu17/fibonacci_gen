@@ -1,11 +1,7 @@
 ## Choose single task ##
 from flask.ext.restful import reqparse, abort, Api, Resource
+from index_table import *
 
-INDEX = {
-    'task1': {'#1': 'Generate N Fibonacci Numbers'},
-    'task2': {'#2': 'Hello World!'},
-    'task3': {'#3': 'Adding more tasks...'},
-}
 
 class SingleTask(Resource):
     # Error message for no-exist task_id

@@ -9,14 +9,14 @@
 
 import unittest
 from itertools import islice
-import fibo_func
-import os,sys
+import fibo_func,os,sys
+from index_table import *
 
-INDEX = {
-    'task1': {'#1': 'Generate N Fibonacci Numbers'},
-    'task2': {'#2': 'Hellow World!'},
-    'task3': {'#3': 'Adding more tasks...'},
-}
+# INDEX = {
+    # 'task1': {'#1': 'Generate N Fibonacci Numbers'},
+    # 'task2': {'#2': 'Hellow World!'},
+    # 'task3': {'#3': 'Adding more tasks...'},
+# }
 	
 		
 # Here's the "unit tests".
@@ -49,10 +49,10 @@ class TestCase(unittest.TestCase):
         fib_n = 1000000000000000000000
         self.assertGreaterEqual(fib_n,sys.maxint)
         
-    # test input todo_id not exist in to-do list    
-    def test_input_wrong_todo_id(self):
-        todo_id = 'task5'
-        self.assertNotIn(todo_id, INDEX)
+    # test input task_id not exist in to-do list    
+    def test_input_wrong_task_id(self):
+        task_id = 'task5'
+        self.assertNotIn(task_id, INDEX)
 
 if __name__ == '__main__':
     unittest.main()

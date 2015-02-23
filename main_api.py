@@ -4,15 +4,17 @@ from flask import Flask
 from flask.ext.restful import reqparse, abort, Api, Resource
 from single_task import *
 from fibo_gen import *
+from index_table import *
+
 app = Flask(__name__)
 api = Api(app)
 
 # menu
-INDEX = {
-    'task1': {'#1': 'Generate N Fibonacci Numbers'},
-    'task2': {'#2': 'Hello World!'},
-    'task3': {'#3': 'Adding more tasks...'},
-}
+# INDEX = {
+    # 'task1': {'#1': 'Generate N Fibonacci Numbers'},
+    # 'task2': {'#2': 'Hello World!'},
+    # 'task3': {'#3': 'Adding more tasks...'},
+# }
 
     
 parser = reqparse.RequestParser()
