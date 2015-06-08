@@ -1,4 +1,4 @@
-## Fibonacci Number Generation Module ##
+## Fibonacci Number Generation Module @ Aaron Xu##
 
 def fib(pre=0, cur=1):
     yield pre
